@@ -30,6 +30,7 @@ class MyHomePage extends StatelessWidget {
               const CustomTextField(
                 hintText: 'Password',
               ),
+             const SizedBox(height: 25,),
               const CustomAuthorisationButton(
                   pageNavigator: SignInScreen.routName,
                   authorizationText: 'Sign in',
@@ -74,7 +75,7 @@ class CustomAuthorisationButton extends StatelessWidget {
       width: 350,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-            side: BorderSide(color: Color.fromRGBO(193, 179, 108, 1)),
+            side: const BorderSide(color: Color.fromRGBO(193, 179, 108, 1)),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
