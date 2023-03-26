@@ -11,18 +11,18 @@ class SignUpScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         children: [
-          CustomTextField(hintName: 'name'),
-          CustomTextField(hintName: 'last name'),
-          CustomTextField(hintName: 'emal adrress'),
+          CustomTextFielddemo(hintName: 'name'),
+          CustomTextFielddemo(hintName: 'last name'),
+          CustomTextFielddemo(hintName: 'emal adrress'),
         ],
       ),
     );
   }
 }
 
-class CustomTextField extends StatelessWidget {
+class CustomTextFielddemo extends StatelessWidget {
   String hintName;
-   CustomTextField({
+   CustomTextFielddemo({
     required this.hintName,
     super.key,
   });

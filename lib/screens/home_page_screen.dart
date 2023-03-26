@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '/screens/sign_in_screen.dart';
 import '/screens/sign_up_screen.dart';
+import '../widgets/custom_text_field_widget.dart';
+
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -22,10 +24,10 @@ class MyHomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const CustomAuthorizationTextField(
+              const CustomTextField(
                 hintText: 'Username',
               ),
-              const CustomAuthorizationTextField(
+              const CustomTextField(
                 hintText: 'Password',
               ),
               const CustomAuthorisationButton(
@@ -49,28 +51,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class CustomAuthorizationTextField extends StatelessWidget {
-  final String hintText;
 
-  const CustomAuthorizationTextField({
-    super.key,
-    required this.hintText,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-      child: TextField(
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(left: 20),
-            border: InputBorder.none,
-            hintText: hintText,
-            hintStyle: const TextStyle(color: Colors.black38)),
-      ),
-    );
-  }
-}
 
 class CustomAuthorisationButton extends StatelessWidget {
   final Color textColor;
