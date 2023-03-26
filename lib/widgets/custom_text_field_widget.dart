@@ -11,7 +11,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: TextField(
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.only(left: 20),

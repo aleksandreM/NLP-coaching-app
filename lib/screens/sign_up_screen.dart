@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_text_field_widget.dart';
+
+
 class SignUpScreen extends StatelessWidget {
   static const routName = '/sign-up-screen';
   const SignUpScreen({super.key});
@@ -7,15 +10,23 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign Up')),
-      body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        children: [
-          CustomTextFielddemo(hintName: 'name'),
-          CustomTextFielddemo(hintName: 'last name'),
-          CustomTextFielddemo(hintName: 'emal adrress'),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+                'assets/images/mandalasemfundo-01.png',
+                height: 300,
+                width: 300,
+              ),
+              const CustomTextField(hintText: 'Username'),
+              const CustomTextField(hintText: 'Email'),
+              const CustomTextField(hintText: 'Password')
+          ],
+        ),
       ),
+      
     );
   }
 }
