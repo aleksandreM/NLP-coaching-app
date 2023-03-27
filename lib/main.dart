@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patricia_app/providers/CheckBoxTogglerProvider.dart';
 import 'package:provider/provider.dart';
 import '/screens/sign_in_screen.dart';
 import '/screens/sign_up_screen.dart';
@@ -13,18 +14,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        // primarySwatch: Colors.amber,
-        
-        scaffoldBackgroundColor: Colors.grey[300],       
+    return ChangeNotifierProvider(
+      create: (context) => CheckBoxTogglerProvider(),
+      child: MaterialApp(
+        theme: ThemeData(
+          // primarySwatch: Colors.amber,
+
+          scaffoldBackgroundColor: Colors.grey[300],
+        ),
+        home: const MyHomePage(),
+        routes: {
+          SignUpScreen.routName: (context) => const SignUpScreen(),
+          SignInScreen.routName: (context) => const SignInScreen(),
+        },
       ),
-      home: const MyHomePage(),
-      routes: {
-        SignUpScreen.routName: (context) => const SignUpScreen(),
-        SignInScreen.routName: (context) => const SignInScreen(),
-      },
     );
   }
 }
-
