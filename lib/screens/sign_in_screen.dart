@@ -7,29 +7,50 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Sign In'), elevation: 0,),
+        appBar: AppBar(
+          title: const Text(
+            'Sign In',
+          ),
+          elevation: 0,
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text(' Place Holder for Logo'),
+            const Text(
+              ' Place Holder for Logo',
+            ),
             Row(
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                const CircleAvatar(
-                  child: Text('photo'),
+              
+              children:  [
+                  CircleAvatar(
+                  child: Text(
+                    'photo',
+                  ),
                 ),
-                const Text('dummy text: hello Joao tribalho'),
+                 Text(
+                  'dummy text: hello Joao tribalho',
+                ),
               ],
             ),
-            const Text('how are you feeling today?'),
+             Text(
+              'how are you feeling today?',
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomIconButton(icon: Icons.sentiment_very_satisfied_sharp),
-                CustomIconButton(icon: Icons.sentiment_neutral),
-                CustomIconButton(icon: Icons.sentiment_dissatisfied),
-                CustomIconButton(icon: Icons.sentiment_very_dissatisfied)
-                ],
+                CustomIconButton(
+                  icon: Icons.sentiment_very_satisfied_sharp,
+                ),
+                CustomIconButton(
+                  icon: Icons.sentiment_neutral,
+                ),
+                CustomIconButton(
+                  icon: Icons.sentiment_dissatisfied,
+                ),
+                CustomIconButton(
+                  icon: Icons.sentiment_very_dissatisfied,
+                ),
+              ],
             )
           ],
         ));
@@ -38,15 +59,18 @@ class SignInScreen extends StatelessWidget {
 
 class CustomIconButton extends StatelessWidget {
   IconData icon;
-   CustomIconButton({
+  CustomIconButton({
     required this.icon,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(onPressed: () {
-
-    }, icon: Icon(icon));
+    return IconButton(
+      onPressed: () {},
+      icon: Icon(
+        icon,
+      ),
+    );
   }
 }

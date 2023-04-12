@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:patricia_app/providers/CheckBoxTogglerProvider.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import './colors.dart';
+import '../providers/CheckBoxTogglerProvider.dart';
 import '../screens/sign_in_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/home_page_screen.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.poppins().fontFamily,
           // primarySwatch: Colors.amber,
           appBarTheme: AppBarTheme(
-            backgroundColor: Colors.grey[300],
+            backgroundColor: CustomCollors.mainBackgroundColor
           ),
 
           scaffoldBackgroundColor: Colors.grey[300],
