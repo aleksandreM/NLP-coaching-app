@@ -7,7 +7,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Sign In')),
+        appBar: AppBar(title: const Text('Sign In'), elevation: 0,),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

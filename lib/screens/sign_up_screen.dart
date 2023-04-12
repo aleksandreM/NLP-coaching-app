@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:patricia_app/screens/sign_in_screen.dart';
-import '/widgets/custom_authorisation_button_widget.dart';
 import 'package:provider/provider.dart';
+import '/widgets/custom_authorisation_button_widget.dart';
 import '../providers/CheckBoxTogglerProvider.dart';
-
 import '../widgets/custom_text_field_widget.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -13,17 +11,21 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/mandalasemfundo-01.png',
-                height: 300,
-                width: 300,
+                height: 250,
+                width: 250,
               ),
+              const SizedBox(height: 40,),
               const CustomTextField(hintText: 'Username'),
               const CustomTextField(hintText: 'Email'),
               const CustomTextField(hintText: 'Password'),
@@ -35,8 +37,9 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   Consumer<CheckBoxTogglerProvider>(
                     builder: (context, checkBoxToggler, child) => Checkbox(
-                        value: checkBoxToggler.isChecked,
-                        onChanged: (newVAlue) => checkBoxToggler.toggleIsChecked()),
+                      value: checkBoxToggler.isChecked,
+                      onChanged: (newVAlue) => checkBoxToggler.toggleIsChecked(),
+                    ),
                   ),
                   const Text('Remember Me'),
                 ],
@@ -44,8 +47,13 @@ class SignUpScreen extends StatelessWidget {
               const CustomAuthorisationButton(
                   pageNavigator: SignUpScreen.routName,
                   authorizationText: 'Sign up',
-                  backgroundColor: Color.fromRGBO(193, 179, 108, 1),
-                  textColor: Colors.black)
+                  backgroundColor: Color.fromRGBO(
+                    193,
+                    179,
+                    108,
+                    1,
+                  ),
+                  textColor: Colors.black),
             ],
           ),
         ),
@@ -54,9 +62,9 @@ class SignUpScreen extends StatelessWidget {
   }
 }
 
-class CustomTextFielddemo extends StatelessWidget {
-  String hintName;
-  CustomTextFielddemo({
+class CustomTextFieldDemo extends StatelessWidget {
+  final String hintName;
+  const CustomTextFieldDemo({
     required this.hintName,
     super.key,
   });
