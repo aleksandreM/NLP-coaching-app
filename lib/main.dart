@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../app_styles.dart';
 import './colors.dart';
 import '../providers/CheckBoxTogglerProvider.dart';
 import '../screens/sign_in_screen.dart';
@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
       create: (context) => CheckBoxTogglerProvider(),
       child: MaterialApp(
         theme: ThemeData(
-          fontFamily: GoogleFonts.poppins().fontFamily,
+          fontFamily: AppStyles.fontFamily,
           // primarySwatch: Colors.amber,
           appBarTheme: AppBarTheme(
-            backgroundColor: CustomCollors.mainBackgroundColor
+            backgroundColor: CustomCollors.mainBackgroundColor,
           ),
 
-          scaffoldBackgroundColor: Colors.grey[300],
+          scaffoldBackgroundColor: CustomCollors.mainBackgroundColor,
         ),
         home: const MyHomePage(),
         routes: {
