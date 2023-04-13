@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../app_styles.dart';
-import './colors.dart';
-import '../providers/CheckBoxTogglerProvider.dart';
-import '../screens/sign_in_screen.dart';
-import '../screens/sign_up_screen.dart';
-import '../screens/home_page_screen.dart';
-
+import '/providers/CheckBoxTogglerProvider.dart';
+import '/screens/sign_in_screen.dart';
+import '/screens/sign_up_screen.dart';
+import '/screens/home_page_screen.dart';
+import '/global_app_colors.dart';
+import '/global_app_styles.dart';
 
 void main() {
   runApp(
@@ -23,13 +22,13 @@ class MyApp extends StatelessWidget {
       create: (context) => CheckBoxTogglerProvider(),
       child: MaterialApp(
         theme: ThemeData(
-          fontFamily: AppStyles.fontFamily,
+          fontFamily: GlobalAppStyles.fontFamily,
           // primarySwatch: Colors.amber,
-          appBarTheme: AppBarTheme(
-            backgroundColor: CustomCollors.mainBackgroundColor,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: GlobalAppColors.mainBackgroundColor,
           ),
 
-          scaffoldBackgroundColor: CustomCollors.mainBackgroundColor,
+          scaffoldBackgroundColor: GlobalAppColors.mainBackgroundColor,
         ),
         home: const MyHomePage(),
         routes: {

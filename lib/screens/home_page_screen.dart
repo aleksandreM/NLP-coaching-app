@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patricia_app/global_app_colors.dart';
 import '../screens/sign_in_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../widgets/custom_text_field_widget.dart';
@@ -40,21 +41,16 @@ class MyHomePage extends StatelessWidget {
                 const CustomAuthorisationButton(
                     pageNavigator: SignInScreen.routName,
                     authorizationText: 'Sign in',
-                    backgroundColor: Color.fromRGBO(
-                      193,
-                      179,
-                      108,
-                      1,
-                    ),
-                    textColor: Colors.black),
+                    backgroundColor: GlobalAppColors.buttonSignInBackgroundCollor,
+                    textColor: GlobalAppColors.buttonSignInTextCollor,),
                 const SizedBox(
                   height: 20,
                 ),
-                CustomAuthorisationButton(
+                  const CustomAuthorisationButton(
                   pageNavigator: SignUpScreen.routName,
                   authorizationText: 'Sign up',
-                  backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                  textColor: const Color.fromRGBO(193, 179, 108, 1),
+                  backgroundColor: GlobalAppColors.mainBackgroundColor,
+                  textColor: GlobalAppColors.buttonSignOutTextCollor
                 ),
               ],
             ),
