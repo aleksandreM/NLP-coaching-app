@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '/providers/CheckBoxTogglerProvider.dart';
-import '/screens/sign_in_screen.dart';
-import '/screens/sign_up_screen.dart';
 import '/screens/home_page_screen.dart';
 import '/global_app_colors.dart';
 import '/global_app_styles.dart';
+import 'routes.dart';
 
 void main() {
   runApp(
@@ -31,10 +30,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: GlobalAppColors.mainBackgroundColor,
         ),
         home: const MyHomePage(),
-        routes: {
-          SignUpScreen.routName: (context) => const SignUpScreen(),
-          SignInScreen.routName: (context) => const SignInScreen(),
-        },
+        routes: Routes.routes,
       ),
     );
   }

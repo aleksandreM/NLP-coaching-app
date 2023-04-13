@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:patricia_app/global_app_colors.dart';
-import '../screens/sign_in_screen.dart';
-import '../screens/sign_up_screen.dart';
-import '../widgets/custom_text_field_widget.dart';
-import '../widgets/custom_authorisation_button_widget.dart';
+import '/global_app_colors.dart';
+import '/screens/sign_in_screen.dart';
+import '/screens/sign_up_screen.dart';
+import '/widgets/custom_text_field_widget.dart';
+import '/widgets/custom_authorisation_button_widget.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
