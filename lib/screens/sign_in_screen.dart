@@ -16,6 +16,11 @@ class SignInScreen extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            Image.asset(
+                  'assets/images/mandalasemfundo-01.png',
+                  height: 250,
+                  width: 250,
+                ),
             const Text(
               ' Place Holder for Logo',
             ),
