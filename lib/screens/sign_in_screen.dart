@@ -21,30 +21,25 @@ class SignInScreen extends StatelessWidget {
                   height: 250,
                   width: 250,
                 ),
-            const Text(
-              ' Place Holder for Logo',
-            ),
             Row(
-              
-              children:  [
-                  CircleAvatar(
-                  child: Text(
-                    'photo',
-                  ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  ' Hello',
                 ),
-                 Text(
-                  'dummy text: hello Joao tribalho',
-                ),
+                SizedBox(width: 15,),
+                Text(' __place holder for name__!'),
               ],
             ),
-             Text(
-              'how are you feeling today?',
-            ),
+          const Text('How do you feel today?'),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomIconButton(
-                  icon: Icons.sentiment_very_satisfied_sharp,
+                  icon: Icons.sentiment_very_satisfied
+                ),
+                CustomIconButton(
+                  icon: Icons.sentiment_satisfied,
                 ),
                 CustomIconButton(
                   icon: Icons.sentiment_neutral,
@@ -56,6 +51,38 @@ class SignInScreen extends StatelessWidget {
                   icon: Icons.sentiment_very_dissatisfied,
                 ),
               ],
+            ),
+            Container(
+              
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color:Colors.white),
+              
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.all(50),
+              
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children:const [
+                  
+                  Text('data'),
+                  Text('second data'),
+                ],
+              ),
+            ),
+            Container(
+              
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color:Colors.white),
+              
+              margin: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.all(50),
+              
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children:const [
+                  
+                  Text('data'),
+                  Text('second data'),
+                ],
+              ),
             )
           ],
         ));
