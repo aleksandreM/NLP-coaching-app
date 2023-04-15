@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import '/screens/objectives.dart';
+import 'energy_screen.dart';
 
 class SignInScreen extends StatelessWidget {
-  static const routName = '/sign-in-button';
+  static const routName = '/sign-in-screen';
   const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Sign In',
-          ),
-          elevation: 0,
+      appBar: AppBar(
+        title: const Text(
+          'Sign In',
         ),
-        body: Column(
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
@@ -53,60 +56,70 @@ class SignInScreen extends StatelessWidget {
               ],
             ),
             const CustomCircularContainer(
+              routeNavigator: ObjectivesScreen.routName,
               aim: 'Objectives',
               imagePath: 'assets/images/objectivos.jpeg',
               secondAim: 'to do',
               secondImagePath: 'assets/images/Tohappen.jpg',
             ),
+            const SizedBox(
+              height: 10,
+            ),
             const CustomCircularContainer(
+                routeNavigator: EnergyScreen.routName,
                 aim: 'Energy',
                 imagePath: 'assets/images/battery.jpg',
                 secondAim: 'performance',
                 secondImagePath: 'assets/images/Performance.jpg')
           ],
         ),
-        bottomNavigationBar: ClipRRect(
-          borderRadius: BorderRadius.circular(50),
-          child: BottomNavigationBar(
-            backgroundColor: Colors.white,
-            currentIndex: 0,
-            items: [
-            BottomNavigationBarItem(icon: Image.asset(
-        'assets/images/Home.jpg',
-        height: 50,
-        width: 50,
-      ), label: ''),
-      BottomNavigationBarItem(icon: Image.asset(
-        'assets/images/Lamp.jpg',
-        height: 50,
-        width: 50,
-      ), label: ''),
-      BottomNavigationBarItem(icon: Image.asset(
-        'assets/images/Balance.jpg',
-        height: 50,
-        width: 50,
-      ), label: ''),
-      BottomNavigationBarItem(icon: Image.asset(
-        'assets/images/Companies.jpg',
-        height: 50,
-        width: 50,
-      ), label: ''),
-      BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
-
-          
-           
-          ]),
-        ),
-        );
+      ),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.circular(50),
+        child: BottomNavigationBar(backgroundColor: Colors.white, currentIndex: 0, items: [
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/Home.jpg',
+                height: 50,
+                width: 50,
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/Lamp.jpg',
+                height: 50,
+                width: 50,
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/Balance.jpg',
+                height: 50,
+                width: 50,
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/Companies.jpg',
+                height: 50,
+                width: 50,
+              ),
+              label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
+        ]),
+      ),
+    );
   }
 }
 
 class CustomCircularContainer extends StatelessWidget {
+  final String routeNavigator;
   final String imagePath;
   final String aim;
   final String secondImagePath;
   final String secondAim;
   const CustomCircularContainer({
+    required this.routeNavigator,
     required this.aim,
     required this.imagePath,
     required this.secondAim,
@@ -127,7 +140,7 @@ class CustomCircularContainer extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                 
+                  Navigator.pushNamed(context, routeNavigator);
                 },
                 child: Image.asset(
                   imagePath,
@@ -141,9 +154,7 @@ class CustomCircularContainer extends StatelessWidget {
           Column(
             children: [
               GestureDetector(
-                onTap: () {
-                  
-                },
+                onTap: () {},
                 child: Image.asset(
                   secondImagePath,
                   height: 60,
@@ -152,7 +163,7 @@ class CustomCircularContainer extends StatelessWidget {
               ),
               Text(secondAim),
             ],
-          )
+          ),
         ],
       ),
     );
