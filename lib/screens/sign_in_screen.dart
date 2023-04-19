@@ -70,7 +70,8 @@ class SignInScreen extends StatelessWidget {
                 aim: 'Energy',
                 imagePath: 'assets/images/battery.jpg',
                 secondAim: 'performance',
-                secondImagePath: 'assets/images/Performance.jpg')
+                secondImagePath: 'assets/images/Performance.jpg'),
+               const SizedBox(height: 10,)
           ],
         ),
       ),
