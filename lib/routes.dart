@@ -8,7 +8,7 @@ class Routes {
   static final Map<String, Widget Function(BuildContext)> routes = {
     SignUpScreen.routName: (context) => const SignUpScreen(),
     SignInScreen.routName: (context) => const SignInScreen(),
-   ObjectivesScreen.routName: (context)=>  ObjectivesScreen(),
+   ObjectivesScreen.routeName: (context)=>  ObjectivesScreen(),
     
     EnergyScreen.routName: (ctx) => const EnergyScreen(),
   };

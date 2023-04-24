@@ -56,7 +56,7 @@ class SignInScreen extends StatelessWidget {
               ],
             ),
             const CustomCircularContainer(
-              routeNavigator: ObjectivesScreen.routName,
+              routeNavigator: ObjectivesScreen.routeName,
               aim: 'Objectives',
               imagePath: 'assets/images/objectivos.jpeg',
               secondAim: 'to do',
