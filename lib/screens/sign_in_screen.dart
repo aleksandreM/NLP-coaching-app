@@ -106,7 +106,14 @@ class SignInScreen extends StatelessWidget {
                 width: 50,
               ),
               label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
+              BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/3dots.jpg',
+                height: 50,
+                width: 50,
+              ),
+              label: ''),
+          // BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
         ]),
       ),
     );

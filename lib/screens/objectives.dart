@@ -5,11 +5,21 @@ import '../providers/star_rating_provider.dart';
 class ObjectivesScreen extends StatelessWidget {
   static const routeName = '/objectives-screen';
 
+  final List<String> experienceTexts = [    'Experience 1',    'Experience 2',    'Experience 3',    'Experience 4',    'Experience 5',    'Experience 6',    'Experience 7',    'Experience 8',    'Experience 9',    'Experience 10',    'Experience 11',    'Experience 12',    'Experience 13',    'Experience 14',    'Experience 15',    'Experience 16',    'Experience 17',    'Experience 18',  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+      appBar: AppBar(
+        title: Text(' this is objectives screen',),
+        elevation: 0,
+        
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30), ),
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10),
           child: Column(
             children: List.generate(
               18,
@@ -18,8 +28,8 @@ class ObjectivesScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Rate your experience ${index + 1}',
-                      style: TextStyle(
+                      experienceTexts[index],
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
@@ -29,8 +39,7 @@ class ObjectivesScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           GestureDetector(
-                            onTap: () =>
-                                starCurrentCollor.setRating(1),
+                            onTap: () => starCurrentCollor.setRating(1),
                             child: Icon(
                               starCurrentCollor.rating >= 1
                                   ? Icons.star
@@ -41,8 +50,7 @@ class ObjectivesScreen extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                starCurrentCollor.setRating(2),
+                            onTap: () => starCurrentCollor.setRating(2),
                             child: Icon(
                               starCurrentCollor.rating >= 2
                                   ? Icons.star
@@ -53,8 +61,7 @@ class ObjectivesScreen extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                starCurrentCollor.setRating(3),
+                            onTap: () => starCurrentCollor.setRating(3),
                             child: Icon(
                               starCurrentCollor.rating >= 3
                                   ? Icons.star
@@ -65,8 +72,7 @@ class ObjectivesScreen extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                starCurrentCollor.setRating(4),
+                            onTap: () => starCurrentCollor.setRating(4),
                             child: Icon(
                               starCurrentCollor.rating >= 4
                                   ? Icons.star
@@ -77,8 +83,7 @@ class ObjectivesScreen extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                starCurrentCollor.setRating(5),
+                            onTap: () => starCurrentCollor.setRating(5),
                             child: Icon(
                               starCurrentCollor.rating >= 5
                                   ? Icons.star
