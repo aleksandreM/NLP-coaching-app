@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '/screens/objectives.dart';
 import 'energy_screen.dart';
+import '/widgets/custom_bottom_navigation_bar.dart';
 
 class SignInScreen extends StatelessWidget {
   static const routName = '/sign-in-screen';
@@ -75,50 +76,12 @@ class SignInScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.circular(50),
-        child: BottomNavigationBar(backgroundColor: Colors.white, currentIndex: 0, items: [
-          BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/Home.jpg',
-                height: 50,
-                width: 50,
-              ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/Lamp.jpg',
-                height: 50,
-                width: 50,
-              ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/Balance.jpg',
-                height: 50,
-                width: 50,
-              ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/Companies.jpg',
-                height: 50,
-                width: 50,
-              ),
-              label: ''),
-              BottomNavigationBarItem(
-              icon: Image.asset(
-                'assets/images/3dots.jpg',
-                height: 50,
-                width: 50,
-              ),
-              label: ''),
-          // BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
-        ]),
-      ),
+      bottomNavigationBar:const CustomBottomNavigationBar(),
     );
   }
 }
+
+
 
 class CustomCircularContainer extends StatelessWidget {
   final String routeNavigator;
