@@ -75,6 +75,8 @@ flutter:
     - assets/images/Balance.jpg
     - assets/images/Companies.jpg
     - assets/images/3dots.jpg
+    - assets/images/arrowGold.jpg
+    - assets/images/arrowBlack.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
