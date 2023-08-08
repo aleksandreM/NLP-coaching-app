@@ -77,6 +77,10 @@ flutter:
     - assets/images/3dots.jpg
     - assets/images/arrowGold.jpg
     - assets/images/arrowBlack.jpg
+    - assets/images/workshop_despertar _da_consciência.jpg
+    - assets/images/workshop_dimensões_do_EU.jpg
+    - assets/images/workshop_eleva_o_teu_poder_pessoal.jpg
+    - assets/images/workshop_relacionamentos.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

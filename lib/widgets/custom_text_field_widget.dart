@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
             contentPadding: const EdgeInsets.only(left: 20),
             border: InputBorder.none,
             hintText: hintText,
-            hintStyle: const TextStyle(color: Colors.black38)),
+            hintStyle: const TextStyle(color: Colors.black38),),
       ),
     );
   }

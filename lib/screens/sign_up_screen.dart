@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../widgets/custom_authorisation_button_widget.dart';
-import '../providers/CheckBoxTogglerProvider.dart';
+import '../providers/check_box_toggler_provider.dart';
 import '../widgets/custom_text_field_widget.dart';
 
 class SignUpScreen extends StatelessWidget {

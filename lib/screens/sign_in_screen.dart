@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '/screens/objectives.dart';
+import 'objectives_screen.dart';
 import 'energy_screen.dart';
 import '/widgets/custom_bottom_navigation_bar.dart';
+import 'to_do_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   static const routName = '/sign-in-screen';
@@ -25,19 +26,18 @@ class SignInScreen extends StatelessWidget {
               height: 250,
               width: 250,
             ),
-            Row(
+           const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Text(
-                  ' Hello',
+                  ' Ola,  _ _ _ _',
                 ),
                 SizedBox(
                   width: 15,
                 ),
-                Text(' __place holder for name__!'),
               ],
             ),
-            const Text('How do you feel today?'),
+            const Text('Toma consciência de\n     como te sentes!'),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -58,38 +58,42 @@ class SignInScreen extends StatelessWidget {
             ),
             const CustomCircularContainer(
               routeNavigator: ObjectivesScreen.routeName,
-              aim: 'Objectives',
+              aim: 'objetivos',
               imagePath: 'assets/images/objectivos.jpeg',
-              secondAim: 'to do',
+              secondAim: 'fazer acontecer',
               secondImagePath: 'assets/images/Tohappen.jpg',
+              secondRoutNavigator: ToDoScreen.routName,
             ),
             const SizedBox(
               height: 10,
             ),
             const CustomCircularContainer(
                 routeNavigator: EnergyScreen.routName,
-                aim: 'Energy',
+                aim: '+ energia',
                 imagePath: 'assets/images/battery.jpg',
                 secondAim: 'performance',
-                secondImagePath: 'assets/images/Performance.jpg'),
-               const SizedBox(height: 10,)
+                secondImagePath: 'assets/images/Performance.jpg',
+                secondRoutNavigator: ToDoScreen.routName ), //temporarily
+            const SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
-      bottomNavigationBar:const CustomBottomNavigationBar(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
 
-
-
 class CustomCircularContainer extends StatelessWidget {
   final String routeNavigator;
+  final String secondRoutNavigator;
   final String imagePath;
   final String aim;
   final String secondImagePath;
   final String secondAim;
   const CustomCircularContainer({
+    required this.secondRoutNavigator,
     required this.routeNavigator,
     required this.aim,
     required this.imagePath,
@@ -125,7 +129,9 @@ class CustomCircularContainer extends StatelessWidget {
           Column(
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, secondRoutNavigator);
+                },
                 child: Image.asset(
                   secondImagePath,
                   height: 60,

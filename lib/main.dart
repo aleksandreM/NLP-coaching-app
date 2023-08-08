@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '/providers/CheckBoxTogglerProvider.dart';
+import 'providers/check_box_toggler_provider.dart';
 import '/screens/home_page_screen.dart';
 import '/global_app_colors.dart';
 import '/global_app_styles.dart';
@@ -17,16 +17,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => CheckBoxTogglerProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CheckBoxTogglerProvider(),),
+        
+      ],
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: GlobalAppStyles.fontFamily,
-          // primarySwatch: Colors.amber,
           appBarTheme: const AppBarTheme(
             backgroundColor: GlobalAppColors.mainBackgroundColor,
           ),
-
           scaffoldBackgroundColor: GlobalAppColors.mainBackgroundColor,
         ),
         home: const MyHomePage(),
